@@ -1,0 +1,446 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #007bff; 
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2em;
+  margin: 0;
+  color: white;
+}
+
+.header form {
+  display: flex;
+  align-items: center;
+}
+
+.header input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.header button {
+  padding: 8px 15px;
+  background-color: #0056b3; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #003d82;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav li {
+  margin-left: 20px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #ddd;
+}
+
+
+#Button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #808000; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#Button:hover {
+  background-color: #6b6b00;
+}
+
+/* Card Styles */
+.card {
+  width: 300px;
+  height: 450px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+#calc {
+  height: 250px; 
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.title {
+  color: #363636;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.colomn {
+  padding: 10px;
+}
+
+@media (max-width: 1024px) {
+  .is-4 {
+      width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .is-4 {
+      width: 100%;
+  }
+
+  .header form {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header input[type="text"] {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .header nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header nav li {
+      margin: 5px 0px;
+      
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      padding: 10px;
+  }
+
+  .header h1 {
+      font-size: 1.5em;
+  }
+
+  .header input[type="text"],
+  .header button {
+      padding: 6px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px); 
+      margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: calc(100% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+      flex-direction: column;
+      align-items: stretch;
+  }
+  .colomn{
+      width: 100%;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail.enlarged {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  z-index: 1000;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.enlarged {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.Thumbnail {
+  background-color: white;
+}
+.HeadingGallery {
+  font-family: sans-serif; 
+  font-size: 2em; 
+  font-weight: bold; 
+  color: #333; 
+  text-align: center; 
+  margin-top: 20px;
+  margin-bottom: 30px; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  border-bottom: 2px solid #ccc; 
+  padding-bottom: 10px; 
+}
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-image {
+  width: 100%;
+  display: none;
+  object-fit: cover;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.slideshow-image.active {
+  display: block;
+}
+
+
+.Footer {
+  font-family: sans-serif;
+  margin: 20px 0 0;
+  padding: 20px;
+  line-height: 1.6;
+  color: #333;
+  max-width: 960px;
+  margin: 20px auto 0;
+  background-color: #e9ecef; 
+  border-top: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.Footer header {
+  background-color: #d1d5db; 
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 8px;
+}
+
+.Footer h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.Footer section {
+  padding: 20px;
+}
+
+.Footer h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.Footer .highlight {
+  background-color: #e6f7ff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #b3e5fc;
+  
+}
+
+.Footer ul, .Footer .highlight ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.Footer li {
+  margin-bottom: 8px;
+}
+
+.Footer p {
+  margin-bottom: 10px;
+}
+
+.Footer .cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.Footer .cta-button:hover {
+  background-color: #0056b3;
+}
+
+.Footer footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  border-radius: 0 0 8
+}
+@media (max-width: 768px) {
+
+.Footer header {
+  
+  padding: 30px 15px;
+  
+ }
+  
+  
+  
+.Footer h1 {
+  
+  font-size: 2em;
+  
+  }
+  
+  
+  
+ .Footer h2 {
+
+  font-size: 1.5em;
+  
+   }
+  
+  
+  
+   .Footer section {
+  
+  padding: 30px 15px;
+  
+   }
+  
+  
+  
+ .Footer .cta-button {
+  
+  padding: 12px 25px;
+  
+font-size: 14px;
+  
+   }
+  
+  }
+  
+  
+  
+  @media (max-width: 480px) {
+  
+  .Footer header {
+  
+  padding: 20px 10px;
+  
+   }
+  
+  
+  
+ .Footer h1 {
+  
+  font-size: 1.8em;
+  
+   }
+  
+  
+  
+.Footer ul, .Footer .highlight ul{
+
+   margin-left: 15px;
+  
+   }
+  
+  }
+
+
+
